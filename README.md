@@ -1,4 +1,4 @@
-# Your Online Hub
+# Jeffo Website
 
 A lightweight personal website for Jeff Oriecuia built with React, TypeScript, and Vite. It functions as a simple online profile and link hub with social links, featured projects, and a short bio.
 
@@ -59,8 +59,8 @@ These components send a `link_click` event with `link_url`, `link_text`, and `li
 ### Setup
 
 ```sh
-git clone https://github.com/redwheeler3/your-online-hub.git
-cd your-online-hub
+git clone https://github.com/redwheeler3/jeffo-website.git
+cd jeffo-website
 npm install
 npm run dev
 ```
@@ -92,7 +92,7 @@ The featured links are currently defined in `src/pages/Index.tsx` and include Je
 
 ## Repository
 
-- **GitHub**: https://github.com/redwheeler3/your-online-hub
+- **GitHub**: https://github.com/redwheeler3/jeffo-website
 - **Live Site**: https://www.jeffo.net
 
 ## Credits
