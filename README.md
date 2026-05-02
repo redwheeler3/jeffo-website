@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
+# Your Online Hub
 
-## Project info
+A lightweight personal website for Jeff Oriecuia built with React, TypeScript, and Vite. It functions as a simple online profile and link hub with social links, featured projects, and a short bio.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live URL**: https://www.jeffo.net
 
-## How can I edit this code?
+## Project Overview
 
-There are several ways of editing your application.
+This repo contains a small single-page application that includes:
 
-**Use Lovable**
+- A profile layout with avatar, intro text, and social icons
+- Featured outbound links to projects and resources
+- Google Analytics tracking for outbound link clicks
+- Responsive styling for desktop and mobile
+- Static deployment via GitHub Pages with a custom domain
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Architecture
 
-Changes made via Lovable will be committed automatically to this repo.
+### Technology Stack
 
-**Use your preferred IDE**
+- **Framework**: React 18.3 with TypeScript
+- **Build Tool**: Vite 7.3
+- **Routing**: React Router v6 with `HashRouter`
+- **Styling**: Tailwind CSS
+- **UI Layer**: Custom components plus shadcn/ui dependencies in the project
+- **Analytics**: Google Analytics (`gtag.js`)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```text
+src/
+├── components/       # Reusable UI building blocks
+├── assets/           # Static assets such as the profile image
+├── pages/            # Route components
+│   ├── Index.tsx     # Main landing page
+│   └── NotFound.tsx  # Fallback route
+├── hooks/            # Shared hooks/utilities
+├── lib/              # Helper functions
+├── App.tsx           # Providers and routes
+└── main.tsx          # App entry point
+```
 
-Follow these steps:
+## Analytics
+
+Google Analytics is loaded in `index.html`. Outbound click tracking is implemented in:
+
+- `src/components/LinkButton.tsx`
+- `src/components/SocialIcon.tsx`
+
+These components send a `link_click` event with `link_url`, `link_text`, and `link_domain` when users click external links.
+
+## Development
+
+### Prerequisites
+
+- Node.js 18+ recommended
+- npm
+
+### Setup
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone https://github.com/redwheeler3/your-online-hub.git
+cd your-online-hub
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server runs at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+```sh
+npm run dev      # Start the dev server
+npm run build    # Production build
+npm run build:dev
+npm run preview  # Preview the build locally
+npm run lint     # Run ESLint
+npm run deploy   # Deploy dist/ to GitHub Pages
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+The site uses static-hosting-friendly settings:
 
-This project is built with:
+- `vite.config.ts` uses `base: "./"`
+- `package.json` includes `gh-pages` deployment scripts
+- `public/CNAME` sets the production domain to `www.jeffo.net`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Content Notes
 
-## How can I deploy this project?
+The featured links are currently defined in `src/pages/Index.tsx` and include Jeff's resume, the Penta Housing Co-op site, the Amazon EventBridge Pipes workshop, and music.jeffo.net.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Repository
 
-## Can I connect a custom domain to my Lovable project?
+- **GitHub**: https://github.com/redwheeler3/your-online-hub
+- **Live Site**: https://www.jeffo.net
 
-Yes, you can!
+## Credits
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Website by [Jeff Oriecuia](https://www.jeffo.net)
