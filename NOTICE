@@ -1,0 +1,19 @@
+## Licensing and rights notice
+
+The MIT License in [`LICENSE`](./LICENSE) applies to this repository except for the personal and branding materials described below.
+
+The MIT License does **not** apply to the following personal or branding materials included in this repository:
+
+- Personal photos, profile images, favicons, logos, and other branding assets
+- Personal names, likenesses, biography text, resumes, and trademark-like identifiers associated with Jeff Oriecuia / jeffo.net
+
+Examples of excluded materials in this repository include:
+
+- `src/assets/profile.jpg`
+- `public/favicon.ico`
+- `public/favicon.jpg`
+- `public/favicon.png`
+
+All rights are reserved for the excluded materials above unless you receive separate written permission from the rights holder.
+
+Third-party services, links, fonts, analytics, and externally hosted assets referenced by this repository are also subject to their own licenses or terms of service and are not relicensed under this repository's MIT License.

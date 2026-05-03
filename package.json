@@ -2,6 +2,7 @@
   "name": "jeffo-website",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
   "homepage": "https://www.jeffo.net",
   "scripts": {
