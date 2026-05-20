@@ -1,6 +1,7 @@
 import Avatar from "@/components/Avatar";
 import SocialIcon from "@/components/SocialIcon";
 import LinkButton from "@/components/LinkButton";
+import TextLink from "@/components/TextLink";
 import profileImage from "@/assets/profile.jpg";
 
 // Custom SVG icons for higher resolution and better visual impact
@@ -30,22 +31,27 @@ const GitHubIcon = () => (
 );
 
 const Index = () => {
+  const resumeLink = "https://resume.jeffo.net";
+  const eventBridgePipesWorkshopLink = "https://catalog.workshops.aws/eb-pipes";
+  const musicLink = "https://music.jeffo.net/";
+  const pentaCoopLink = "https://www.pentacoop.com/?utm_source=jeffo.net&utm_medium=referral";
+
   const links = [
     {
       label: "My Resume",
-      href: "https://resume.jeffo.net",
-    },
-    {
-      label: "Penta Housing Co-op Website",
-      href: "https://www.pentacoop.com/?utm_source=jeffo.net&utm_medium=referral",
+      href: resumeLink,
     },
     {
       label: "Amazon EventBridge Pipes Workshop",
-      href: "https://catalog.workshops.aws/eb-pipes",
+      href: eventBridgePipesWorkshopLink,
     },
     {
       label: "Unsanctioned Songs About Pipes",
-      href: "https://music.jeffo.net/",
+      href: musicLink,
+    },
+    {
+      label: "Penta Housing Co-op Website",
+      href: pentaCoopLink,
     },
   ];
 
@@ -93,18 +99,18 @@ const Index = () => {
             I'm a Senior Technical Product Manager at Amazon with a love for
             snowboarding, sailing, and exploring new places. I'm passionate about public
             speaking and enjoy running interactive demos, giving presentations, and
-            serving on panels. Check out the hands-on
-            workshop for Amazon EventBridge Pipes that I created and presented
+            serving on panels. You can learn more in <TextLink href={resumeLink} label="Inline Resume">my resume</TextLink>.
+            Check out the hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">workshop for Amazon EventBridge Pipes</TextLink> that I created and presented
             at re:Invent 3 years in a row.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Lately I've been "creating" AI music, though it skews pretty heavily
             into songs about Pipes and other AWS stuff. Every time I listen to
-            it, I'm amazed at how far the technology has progressed. Feel free
-            to give it a listen yourself!
+            it, I'm amazed at how far the technology has progressed. Feel free to
+            <TextLink href={musicLink} label="Inline Unsanctioned Songs About Pipes"> give it a listen yourself</TextLink>!
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I live in a housing co-op and built our community website. I'm
+            I live in a housing co-op and built our <TextLink href={pentaCoopLink} label="Inline Penta Housing Co-op Website">community website</TextLink>. I'm
             always happy to connect, whether it's about work or speaking
             opportunities, co-op living, or getting your website up and running.
           </p>

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { trackLinkClick } from "@/lib/analytics";
 
 interface LinkButtonProps {
   href: string;
@@ -7,33 +8,12 @@ interface LinkButtonProps {
 }
 
 const LinkButton = ({ href, label, delay = 0 }: LinkButtonProps) => {
-  const handleClick = () => {
-    const gtag = (window as any)?.gtag as
-      | undefined
-      | ((...args: any[]) => void);
-
-    if (typeof gtag !== "function") return;
-
-    let linkDomain: string | undefined;
-    try {
-      linkDomain = new URL(href).hostname;
-    } catch {
-      // ignore malformed URLs
-    }
-
-    gtag("event", "link_click", {
-      link_url: href,
-      link_text: label,
-      link_domain: linkDomain,
-    });
-  };
-
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={handleClick}
+      onClick={() => trackLinkClick(href, label)}
       className="link-button opacity-0 animate-fade-in-up group"
       style={{ animationDelay: `${delay}ms` }}
     >
