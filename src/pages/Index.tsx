@@ -98,6 +98,8 @@ const Index = () => {
           <p className="text-muted-foreground leading-relaxed">
             I'm a Senior Technical Product Manager at Amazon with a love for
             snowboarding, sailing, and exploring new places. You can learn more about my professional background in <TextLink href={resumeLink} label="Inline Resume">my resume</TextLink>.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
             I'm passionate about public
             speaking and enjoy running interactive demos, giving presentations, and
             serving on panels, including the hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">workshop for Amazon EventBridge Pipes</TextLink> that I created and presented
