@@ -97,10 +97,10 @@ const Index = () => {
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I'm a Senior Technical Product Manager at Amazon with a love for
-            snowboarding, sailing, and exploring new places. I'm passionate about public
+            snowboarding, sailing, and exploring new places. You can learn more about my professional background in <TextLink href={resumeLink} label="Inline Resume">my resume</TextLink>.
+            I'm passionate about public
             speaking and enjoy running interactive demos, giving presentations, and
-            serving on panels. You can learn more in <TextLink href={resumeLink} label="Inline Resume">my resume</TextLink>.
-            Check out the hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">workshop for Amazon EventBridge Pipes</TextLink> that I created and presented
+            serving on panels, including the hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">workshop for Amazon EventBridge Pipes</TextLink> that I created and presented
             at re:Invent 3 years in a row.
           </p>
           <p className="text-muted-foreground leading-relaxed">
