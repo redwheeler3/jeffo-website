@@ -57,7 +57,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col items-center px-5 py-16">
-      <main className="w-full max-w-md flex flex-col items-center">
+      <main className="w-full max-w-md md:max-w-xl lg:max-w-2xl flex flex-col items-center">
         {/* Avatar */}
         <Avatar src={profileImage} alt="Jeff Oriecuia" />
 
