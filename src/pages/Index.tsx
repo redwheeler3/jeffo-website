@@ -115,8 +115,8 @@ const Index = () => {
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I like public speaking, hands-on demos, and making complex technical
-            products easier to understand. I created and presented the hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">workshop for Amazon EventBridge Pipes</TextLink> at 
-            re:Invent 3 years in a row.
+            products easier to understand. I created and presented a hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">Amazon EventBridge Pipes workshop</TextLink> at
+            re:Invent three years in a row.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I still enjoy getting my hands dirty with code. My <TextLink href={githubLink} label="Inline GitHub Projects">GitHub</TextLink> has
