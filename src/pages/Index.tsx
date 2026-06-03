@@ -31,7 +31,7 @@ const GitHubIcon = () => (
 );
 
 const Index = () => {
-  const resumeLink = "https://resume.jeffo.net";
+  const resumeLink = "/OriecuiaResume.pdf";
   const githubLink = "https://github.com/redwheeler3/";
   const eventBridgePipesWorkshopLink = "https://catalog.workshops.aws/eb-pipes";
   const musicLink = "https://music.jeffo.net/";
