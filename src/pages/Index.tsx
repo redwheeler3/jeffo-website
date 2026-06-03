@@ -121,7 +121,7 @@ const Index = () => {
           <p className="text-muted-foreground leading-relaxed">
             I still enjoy getting my hands dirty with code. My <TextLink href={githubLink} label="Inline GitHub Projects">GitHub</TextLink> has
             a mix of practical projects and experiments, including this site,
-            investment portfolio tooling, and digital tinkering.
+            investment portfolio tooling, and a Cline MCP bridge for Gmail and Google Calendar.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Outside work, I snowboard, sail, explore new places, and live in a
