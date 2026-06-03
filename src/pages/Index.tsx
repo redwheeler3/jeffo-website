@@ -32,6 +32,7 @@ const GitHubIcon = () => (
 
 const Index = () => {
   const resumeLink = "https://resume.jeffo.net";
+  const githubLink = "https://github.com/redwheeler3/";
   const eventBridgePipesWorkshopLink = "https://catalog.workshops.aws/eb-pipes";
   const musicLink = "https://music.jeffo.net/";
   const pentaCoopLink = "https://www.pentacoop.com/?utm_source=jeffo.net&utm_medium=referral";
@@ -44,6 +45,10 @@ const Index = () => {
     {
       label: "Amazon EventBridge Pipes Workshop",
       href: eventBridgePipesWorkshopLink,
+    },
+    {
+      label: "GitHub Projects",
+      href: githubLink,
     },
     {
       label: "Unsanctioned Songs About Pipes",
@@ -79,7 +84,7 @@ const Index = () => {
             label="Facebook"
           />
           <SocialIcon
-            href="https://github.com/redwheeler3/"
+            href={githubLink}
             icon={<GitHubIcon />}
             label="GitHub"
           />
@@ -96,25 +101,38 @@ const Index = () => {
             Nice to meet you!
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I'm a Senior Technical Product Manager at Amazon with a love for
-            snowboarding, sailing, and exploring new places. You can learn more about my professional background in <TextLink href={resumeLink} label="Inline Resume">my resume</TextLink>.
+            I'm a technical product manager in Vancouver, currently at Amazon,
+            with a background in cloud platforms, APIs, pricing, customer
+            discovery, and large-scale distributed systems. You can learn more
+            about my professional background in <TextLink href={resumeLink} label="Inline Resume">my resume</TextLink>.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I'm passionate about public
-            speaking and enjoy running interactive demos, giving presentations, and
-            serving on panels, including the hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">workshop for Amazon EventBridge Pipes</TextLink> that I created and presented
-            at re:Invent 3 years in a row.
+            At AWS, I worked on core Amazon EventBridge services used by 1.8M+
+            customers, including pricing work for a platform generating $37M in
+            annual revenue. More recently, I've been working on Amazon Bazaar,
+            a cross-border shopping app for customers across Latin America, the
+            Middle East, and Asia-Pacific.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Lately I've been "creating" AI music, though it skews pretty heavily
-            into songs about Pipes and other AWS stuff. Every time I listen to
-            it, I'm amazed at how far the technology has progressed. Feel free to
-            <TextLink href={musicLink} label="Inline Unsanctioned Songs About Pipes"> give it a listen yourself</TextLink>!
+            I like public speaking, hands-on demos, and making complex technical
+            products easier to understand. I created and presented the hands-on <TextLink href={eventBridgePipesWorkshopLink} label="Inline Amazon EventBridge Pipes Workshop">workshop for Amazon EventBridge Pipes</TextLink> at 
+            re:Invent 3 years in a row.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I live in a housing co-op and built our <TextLink href={pentaCoopLink} label="Inline Penta Housing Co-op Website">community website</TextLink>. I'm
-            always happy to connect, whether it's about work or speaking
-            opportunities, co-op living, or getting your website up and running.
+            I still enjoy getting my hands dirty with code. My <TextLink href={githubLink} label="Inline GitHub Projects">GitHub</TextLink> has
+            a mix of practical projects and experiments, including this site,
+            investment portfolio tooling, and digital tinkering.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Outside work, I snowboard, sail, explore new places, and live in a
+            housing co-op where I built our <TextLink href={pentaCoopLink} label="Inline Penta Housing Co-op Website">community website</TextLink>. Lately I've
+            also been "creating" AI music, though it skews pretty heavily into
+            songs about Pipes and other AWS stuff. Feel free to <TextLink href={musicLink} label="Inline Unsanctioned Songs About Pipes">give it a listen</TextLink>!
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            I'm always happy to connect about product leadership, platform work,
+            speaking opportunities, co-op living, or getting a website off the
+            ground.
           </p>
         </div>
 
