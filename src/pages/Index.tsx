@@ -51,12 +51,12 @@ const Index = () => {
       href: githubLink,
     },
     {
-      label: "Unsanctioned Songs About Pipes",
-      href: musicLink,
-    },
-    {
       label: "Penta Housing Co-op Website",
       href: pentaCoopLink,
+    },
+    {
+      label: "Unsanctioned Songs About Pipes",
+      href: musicLink,
     },
   ];
 
