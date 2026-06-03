@@ -79,14 +79,14 @@ const Index = () => {
             label="LinkedIn"
           />
           <SocialIcon
-            href="https://www.facebook.com/redwheeler"
-            icon={<FacebookIcon />}
-            label="Facebook"
-          />
-          <SocialIcon
             href={githubLink}
             icon={<GitHubIcon />}
             label="GitHub"
+          />
+          <SocialIcon
+            href="https://www.facebook.com/redwheeler"
+            icon={<FacebookIcon />}
+            label="Facebook"
           />
           <SocialIcon
             href="mailto:contact@jeffo.net"
