@@ -11,12 +11,6 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-const FacebookIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-  </svg>
-);
-
 const EmailIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect width="20" height="16" x="2" y="4" rx="2"/>
@@ -84,11 +78,6 @@ const Index = () => {
             label="GitHub"
           />
           <SocialIcon
-            href="https://www.facebook.com/redwheeler"
-            icon={<FacebookIcon />}
-            label="Facebook"
-          />
-          <SocialIcon
             href="mailto:contact@jeffo.net"
             icon={<EmailIcon />}
             label="Email"
@@ -121,7 +110,8 @@ const Index = () => {
           <p className="text-muted-foreground leading-relaxed">
             I still enjoy getting my hands dirty with code. My <TextLink href={githubLink} label="Inline GitHub Projects">GitHub</TextLink> has
             a mix of practical projects and experiments, including this site,
-            investment portfolio tooling, and a Cline MCP bridge for Gmail and Google Calendar.
+            investment portfolio tooling, and an MCP bridge that connects clients
+            like Claude Code, Codex, and Cline to Google's Gmail, Calendar, and Drive.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Outside work, I snowboard, sail, explore new places, and live in a
