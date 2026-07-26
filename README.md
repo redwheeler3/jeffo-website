@@ -1,116 +1,47 @@
 # Jeffo Website
 
-A lightweight personal website for Jeff Oriecuia built with React, TypeScript, and Vite. It functions as a simple online profile and link hub with social links, featured projects, and a short bio.
+A static personal website for Jeff Oriecuia: a short professional profile, featured links, and outbound-link analytics.
 
-**Live URL**: https://www.jeffo.net
-
-## Project Overview
-
-This repo contains a small single-page application that includes:
-
-- A profile layout with avatar, intro text, and social icons
-- Featured outbound links to projects and resources
-- Google Analytics tracking for outbound link clicks
-- Responsive styling for desktop and mobile
-- Static deployment via GitHub Pages with a custom domain
+**Live URL:** https://www.jeffo.net
 
 ## Architecture
 
-### Technology Stack
-
-- **Framework**: React 18.3 with TypeScript
-- **Build Tool**: Vite 7.3
-- **Routing**: React Router v6 with `HashRouter`
-- **Styling**: Tailwind CSS
-- **UI Layer**: Custom components plus shadcn/ui dependencies in the project
-- **Analytics**: Google Analytics (`gtag.js`)
-
-### Project Structure
+The site intentionally has no application framework or client-side rendering.
 
 ```text
-src/
-├── components/       # Reusable UI building blocks
-├── assets/           # Static assets such as the profile image
-├── pages/            # Route components
-│   ├── Index.tsx     # Main landing page
-│   └── NotFound.tsx  # Fallback route
-├── hooks/            # Shared hooks/utilities
-├── lib/              # Helper functions
-├── App.tsx           # Providers and routes
-└── main.tsx          # App entry point
+index.html          Page content, metadata, and Google Analytics loader
+styles.css          Responsive presentation and interaction styles
+analytics.js        Delegated outbound-link tracking
+scripts/build.mjs   Copies the site and public assets to dist/
+public/             Resume, profile image, social preview, icons, CNAME, and robots.txt
 ```
 
-## Analytics
+All visible content is present in `index.html`, so it is available before JavaScript runs. `analytics.js` is the only site JavaScript and sends a Google Analytics `link_click` event for every link marked with `data-track`, preserving the event fields `link_url`, `link_text`, and `link_domain`.
 
-Google Analytics is loaded in `index.html`. Outbound click tracking is implemented in:
+## Development and deployment
 
-- `src/components/LinkButton.tsx`
-- `src/components/SocialIcon.tsx`
-
-These components send a `link_click` event with `link_url`, `link_text`, and `link_domain` when users click external links.
-
-## Development
-
-### Prerequisites
-
-- Node.js 18+ recommended
-- npm
-
-### Setup
+Requirements: Node.js 18+ and npm.
 
 ```sh
-git clone https://github.com/redwheeler3/jeffo-website.git
-cd jeffo-website
 npm install
-npm run dev
+npm run build
+npm run preview
+npm run deploy
 ```
 
-The dev server runs at `http://localhost:8080`.
+`npm run build` produces `dist/`, copying `index.html` to both `dist/index.html` and `dist/404.html`. The latter preserves the GitHub Pages fallback used by the previous deployment. `npm run deploy` publishes `dist/` through `gh-pages`; `public/CNAME` keeps the custom domain set to `www.jeffo.net`.
 
-### Available Scripts
-
-```sh
-npm run dev      # Start the dev server
-npm run build    # Production build
-npm run build:dev
-npm run preview  # Preview the build locally
-npm run lint     # Run ESLint
-npm run deploy   # Deploy dist/ to GitHub Pages
-```
-
-## Deployment
-
-The site uses static-hosting-friendly settings:
-
-- `vite.config.ts` uses `base: "./"`
-- `package.json` includes `gh-pages` deployment scripts
-- `public/CNAME` sets the production domain to `www.jeffo.net`
-
-## Content Notes
-
-The featured links are currently defined in `src/pages/Index.tsx` and include Jeff's resume, the Penta Housing Co-op site, the Amazon EventBridge Pipes workshop, and music.jeffo.net.
+`npm run preview` rebuilds the site and serves it at http://localhost:8080.
 
 ## Repository
 
-- **GitHub**: https://github.com/redwheeler3/jeffo-website
-- **Live Site**: https://www.jeffo.net
+- GitHub: https://github.com/redwheeler3/jeffo-website
+- Live site: https://www.jeffo.net
 
 ## License
 
 The MIT License in [`LICENSE`](./LICENSE) applies to this repository except for the personal and branding materials described below.
 
-The MIT License does **not** apply to the following personal or branding materials included in this repository:
+The MIT License does **not** apply to personal photos, profile images, favicons, logos, biography text, resumes, and trademark-like identifiers associated with Jeff Oriecuia or jeffo.net. All rights are reserved for those materials unless you receive separate written permission from the rights holder.
 
-- Personal photos, profile images, favicons, logos, and other branding assets
-- Personal names, likenesses, biography text, resumes, and trademark-like identifiers associated with Jeff Oriecuia / jeffo.net
-
-Examples of excluded materials in this repository include:
-
-- `src/assets/profile.jpg`
-- `public/favicon.ico`
-- `public/favicon.jpg`
-- `public/favicon.png`
-
-All rights are reserved for the excluded materials above unless you receive separate written permission from the rights holder.
-
-Third-party services, links, fonts, analytics, and externally hosted assets referenced by this repository are also subject to their own licenses or terms of service and are not relicensed under this repository's MIT License.
+Third-party services, links, fonts, analytics, and externally hosted assets referenced by this repository are subject to their own licenses or terms and are not relicensed under this repository's MIT License.

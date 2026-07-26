@@ -9,9 +9,8 @@ The MIT License does **not** apply to the following personal or branding materia
 
 Examples of excluded materials in this repository include:
 
-- `src/assets/profile.jpg`
 - `public/favicon.ico`
-- `public/favicon.jpg`
+- `public/profile.jpg`
 - `public/favicon.png`
 
 All rights are reserved for the excluded materials above unless you receive separate written permission from the rights holder.
