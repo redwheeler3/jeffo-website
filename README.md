@@ -13,7 +13,7 @@ index.html          Page content, metadata, and Google Analytics loader
 styles.css          Responsive presentation and interaction styles
 analytics.js        Delegated outbound-link tracking
 scripts/build.mjs   Copies the site and public assets to dist/
-public/             Resume, profile image, social preview, icons, CNAME, and robots.txt
+public/             Profile image, social preview, icons, CNAME, and robots.txt
 ```
 
 All visible content is present in `index.html`, so it is available before JavaScript runs. `analytics.js` is the only site JavaScript and sends a Google Analytics `link_click` event for every link marked with `data-track`, preserving the event fields `link_url`, `link_text`, and `link_domain`.
